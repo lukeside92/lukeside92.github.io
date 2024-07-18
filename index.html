@@ -1,47 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Document</title>
-    </head>
-    <header>
-        <h1>My Projects</h1>
-   
-    </header>
-    <body>    
-        <p>Here are some of my mini projects.</p>
-        <section>
-            <ul>
-                <li><a href="/expanding_cards.html">My Family:</a> this is a sliding gallery.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <ul>
-                <li><a href="/progress_steps.html">Progress bar:</a> this could be added to a from to show the progression.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <ul>
-                <li><a href="/rotating_nav.html">Rotating navbar:</a> this could be added to your website for a cool way to view your navigation links. (Just click on the ☰ to see the navigation links.)
-                </li>
-            </ul>
-        </section>
-    </body>
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
 <body>
-
+    <header>
+        <nav>
+            <p class="logo">Luke Sidebottom</p>
+            <a class="menu-toggle" id="menu-toggle" aria-label="Menu Button" aria-expanded="false">
+                ≡
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h1>Introducing Luke </h1>
+            <p>Pursue knowledge, not mere imitation.</p>
+            <a href="#skills" class="cta-button">Learn more</a>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <article class="skill">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
+                <h3>Html & Css</h3>
+                <p>Static Web pages</p>
+            </article>
+            <article class="skill">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z"/></svg>
+                <h3>JS & React</h3>
+                <p>Bringing Web pages to Life</p>
+            </article>
+            <article class="skill">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-360v-240h140q24 0 42 18t18 42v40q0 24-18 42t-42 18h-80v80h-60Zm260 0v-240h60v80h80v-80h60v240h-60v-100h-80v100h-60Zm280 0v-240h140q24 0 42 18t18 42v40q0 24-18 42t-42 18h-80v80h-60ZM180-500h80v-40h-80v40Zm540 0h80v-40h-80v40Z"/></svg>
+                <h3>PHP & Laravel</h3>
+                <p>Creating FullStack Apps</p>
+            </article>
+        </section>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>Hard-working and dedicated professional, passionate about my work and driven by a commitment to excellence and
+                continuous improvement. Trained intensively in all aspects of Development work and now keen to embark on a new career as a
+                Developer. Very much a team player with excellent interpersonal skills, and highly conversant in real-world customer-facing
+                business practices. Diverse background in web development, customer service and logistics, with the skills and ability to adapt
+                to various roles and responsibilities. Anticipating being an asset to any dynamic team environment, and making a valuable
+                contribution to the aims, sales, and profitability of the organisation</p>
+        </section>
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <h3>Here are some mini projects to show you what i can do!</h3>
+            <ul>
+                <li><a href="/expanding_cards.html">My Family:<br></a> This is a sliding gallery.</li>
+                <li><a href="/progress_steps.html">Progress bar:<br/></a> this could be added to a from to show the progression.
+                </li>
+                <li><a href="/rotating_nav.html">Rotating navbar:<br/></a> this could be added to your website for a cool way to view your navigation links. (Just click on the ☰ to see the navigation links.)
+                </li>
+            </ul>
+         </section>
+    </main>
+    <footer>
+        <p>&copy;2024 Luke All rights reserved </p>
+    </footer>
+    <script>
+        document
+            .getElementById('menu-toggle')
+            .addEventListener('click', function () {
+                document.getElementById('nav-links').classList.toggle('active');
+                document.getElementById('menu-toggle').ariaExpanded =
+                document.getElementById('menu-toggle').ariaExpanded == "true" ? "false" : "true";
+            });
+    </script>
 </body>
 </html>
+
+
